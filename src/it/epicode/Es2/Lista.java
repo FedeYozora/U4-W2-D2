@@ -1,8 +1,6 @@
 package it.epicode.Es2;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Lista {
 
@@ -15,7 +13,7 @@ public class Lista {
             randomList.add(num);
         }
 
-        randomList.sort(null);
+        Collections.shuffle(randomList);
         return randomList;
     }
 
@@ -31,9 +29,9 @@ public class Lista {
 
     public static void printList(List<Integer> list, boolean printPari) {
         for (int i = 0; i < list.size(); i++) {
-            if (printPari && i % 2 == 0) {
+            if (printPari && (i-1) % 2 == 0) {
                 System.out.println(list.get(i));
-            } else if (!printPari && i % 2 != 0) {
+            } else if (!printPari && (i+1) % 2 != 0) {
                 System.out.println(list.get(i));
             }
         }

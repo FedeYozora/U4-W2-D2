@@ -1,7 +1,6 @@
 package it.epicode.Es1;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -14,7 +13,7 @@ public class ParoleDuplicate {
         System.out.println("Inserisci " + n + " parole:");
 
         Set<String> set = new HashSet<>();
-        Set<String> duplicates = new LinkedHashSet<>();
+        Set<String> duplicates = new HashSet<>();
         for (int i = 0; i < n; i++) {
             String word = scanner.next();
             if (!set.add(word)) {
